@@ -1,0 +1,85 @@
+main {
+    width: 40%;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: white !important;
+    box-shadow: 4px 4px 8px 2px #666;
+}
+
+.margini {
+    width: 40%;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+    color: white;
+    background-image: linear-gradient(to top, #2A5F6B, #009DC2);
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px 2px #666;
+}
+
+#primacosa {
+    margin: 3.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url(assets/img/sfondo.png);
+    background-repeat: repeat-y;
+    text-align: center;
+}
+
+.partebassa {
+    width: 40%;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-top: none;
+    background-color: white !important;
+    box-shadow: 4px 4px 8px 2px #666;
+}
+
+#news {
+    width: 40%;
+    background-color: white !important;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+    box-shadow: 4px 4px 8px 2px #666;
+    margin-top: 2.4vh;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+}
+
+li {
+    padding: 10px;
+}
+
+#video {
+    width: 90%;
+    height: 10%;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px 2px #666;
+}
+
+#mario {
+    color: gray !important;
+}
+
+.art {
+    background-color: #E3E3E3 !important;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: 2.5%
+}
+
+#newsbox {
+    margin: 6% 4% 6% 4%;
+    background-color: #E3E3E3 !important;
+}
