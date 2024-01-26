@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    color: #393d41;
+    background-color: white;
+    font-size: 1.45rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+    text-align: center;
+}
+
+nav {
+    background-image: url(banner.jpg);
+    min-height: 54vh;
+    min-height: 54vh;
+    background-size: 82vh;
+    background-position: center;
+}
+
+h1 {
+    padding-top: 4rem;
+    margin: 0;
+    color: #25a2c3;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+#primo {
+    margin: 4.5rem 3rem 0 3rem;
+}
+
+h4 {
+    color: #25a2c3;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+p {
+    margin: 2rem;
+}
+
+#logoarea {
+    text-align: center;
+    background-color: black;
+}
+
+#logo {
+    margin: 7.5%;
+    width: 35%;
+}
+
+.button {
+    border-color: #f04c2f !important;
+    appearance: button;
+    text-decoration: none;
+    background-color: #f04c2f !important;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 1.1rem;
+    width: 37%;
+    height: 7vh;
+    border-radius: 5px;
+    border-style: hidden;
+
+}
+
+#link {
+    border-style: hidden;
+    font-size: 1.2rem;
+}
+
+
+#primasec {
+    margin-bottom: 3.5rem;
+}
+
+#redpropaganda {
+    color: white;
+    background-color: #e22d0e;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+span {
+    font-size: 75%;
+}
+
+body {
+    background-color: white;
+}
+
+#computer {
+    margin: 0;
+    border-radius: 50%;
+    max-width: 22rem;
+}
+
+.boxcopia {
+    border: 1px solid black;
+    margin: 3rem 2rem 1rem 2rem;
+    max-height: 28.8rem;
+    padding-bottom: 1.7rem;
+    border-color: #dee1e3;
+}
+
+.foto {
+    max-width: 100%;
+}
+
+.boxwrite {
+    margin: 0;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+
+}
+
+#footer {
+    color: white;
+    background-color: #25a2c3;
+    padding: 2.5vh;
+
+}
+
+
+.endw {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+#ex {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+#end {
+    font-size: 1rem;
+    border-top: 1px solid white;
+}
