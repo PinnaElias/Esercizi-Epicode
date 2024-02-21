@@ -89,3 +89,12 @@ p {
     font-weight: bold;
     border-radius: 40px;
 }
+
+#bee {
+    width: 100%;
+}
+
+ul :first-child {
+    display: flex;
+    flex-direction: row;
+}
