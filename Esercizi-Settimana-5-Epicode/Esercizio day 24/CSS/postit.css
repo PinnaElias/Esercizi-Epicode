@@ -25,7 +25,7 @@ main {
     border: 1px solid black;
     width: 12%;
     gap: 20px;
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
 }
 
 .postIt p {
@@ -39,8 +39,8 @@ main {
 }
 
 .postIt :hover {
-    transform: scale(1.2);
-}
+    transform: scale(1.2) !important; 
+} 
 
 #primo, #quinto, #settimo {
     background-color: #f2f3be;
