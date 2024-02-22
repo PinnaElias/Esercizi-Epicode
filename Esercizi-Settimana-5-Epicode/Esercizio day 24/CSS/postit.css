@@ -1,0 +1,60 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+main {
+    margin: 0;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #666666;
+    color: #141410;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.postIt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin: 30px;
+    padding: 70px;
+    text-align: center;
+    border: 1px solid black;
+    width: 12%;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.postIt p {
+    margin: auto;
+    font-size: 2rem;
+}
+
+.postIt h2 {
+    margin: auto;
+    font-size: 2.5rem;
+}
+
+.postIt :hover {
+    transform: scale(1.2);
+}
+
+#primo, #quinto, #settimo {
+    background-color: #f2f3be;
+    transform: rotate(4deg) translateY(17px);
+}
+
+#secondo, #quarto, #ottavo {
+    background-color: #b9e0bb;
+    transform: rotate(-7deg) translateY(17px);
+
+}
+
+#terzo, #sesto {
+    background-color: #b3b2cf;
+    transform: rotate(5deg) translateY(17px);
+
+}
