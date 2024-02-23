@@ -3,17 +3,20 @@ body {
 }
 
 header {
-    display: flex;
     background-color: #ffc017;
 }
 
 nav {
     display: flex;
+    width: 100%;
 }
 
 a {
+    line-height: 20px;
+    font-size: 16px;
     text-decoration: none;
     color: black;
+    padding: 10px;
 }
 
 a:hover,
@@ -21,6 +24,27 @@ a:visited {
     color: black;
 }
 
+#motto {
+    letter-spacing: -0.05em;
+    font-family: "Spectral", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+svg {
+    transform: scale(0.4);
+}
+
 main {
     background-color: #FFFFFF;
+}
+
+#secondRow {
+    display: flex;
+    margin-left: 100px;
+    justify-content: space-between;}
+
+.inline {
+    display: flex;
+    flex-direction: row;
 }
