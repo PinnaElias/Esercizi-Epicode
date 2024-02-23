@@ -15,6 +15,10 @@ nav {
     width: 100%;
 }
 
+nav ul {
+    display: flex;
+}
+
 a {
     line-height: 20px;
     font-size: 16px;
@@ -39,16 +43,58 @@ svg {
     transform: scale(0.4);
 }
 
-main {
-    background-color: #FFFFFF;
-}
 
 #secondRow {
     display: flex;
     margin-left: 100px;
-    justify-content: space-between;}
+    justify-content: space-between;
+}
 
 .inline {
     display: flex;
     flex-direction: row;
+}
+
+main {
+    background-color: #FFFFFF;
+}
+
+
+#articleContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.article {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.articleNumber p {
+    
+    font-size: 2.2rem;
+    color: #c3c9ce;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author img {
+    border-radius: 100%;
+    transform: scale(0.7);
+}
+
+.authorsName {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.articleBottom {
+    display: flex;
+    justify-content: space-between;
+    color: #c3c9ce;
 }
