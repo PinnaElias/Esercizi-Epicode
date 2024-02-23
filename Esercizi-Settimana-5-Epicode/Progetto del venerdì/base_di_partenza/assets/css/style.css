@@ -21,8 +21,9 @@ header {
     border-bottom: 1px solid black;
     width: 100%;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
+    padding: 0 30px
 }
 
 .noScroll div:first-child {
@@ -46,6 +47,10 @@ nav ul {
     display: flex;
     align-content: baseline;
 
+}
+
+.menuOption {
+    display: flex;
 }
 
 a {
@@ -154,7 +159,6 @@ main {
     display: flex;
     flex-direction: row;
     max-width: 25%;
-    transform: scale(1.1);
 }
 
 
@@ -193,20 +197,24 @@ main {
     padding-top: 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .relatedArticle {
     display: flex;
     align-items: center;
-    padding-left: 2.8rem;
-    gap: 30px;
     margin: 1rem;
+    width: 100%;
+    margin-left: 3rem;
 }
 
 .largeArticle {
     display: flex;
     flex-direction: column;
-    max-width: 60%;
+    min-width: 50%;
+    max-width: 50%;
+    margin: 1rem;
 }
 
 .articleTitle h3 {
