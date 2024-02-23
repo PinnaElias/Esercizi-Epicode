@@ -10,19 +10,28 @@ header {
     border-bottom: 1px solid black;
 }
 
-.noScroll {
+#noScroll {
+    padding: 0 10px 0 10px;
     position: sticky;
     border-bottom: 1px solid black;
     width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
 }
 
 nav {
     display: flex;
     width: 100%;
+    align-content: baseline;
+
 }
 
 nav ul {
     display: flex;
+    align-content: baseline;
+
 }
 
 a {
@@ -49,6 +58,14 @@ a:visited {
     font-weight: 500;
 }
 
+#secondButton {
+    margin: 2.8rem 0 2.8rem 0;
+}
+
+#secondButton a {
+    font-size: 22px;
+}
+
 .blackButton a {
     color: white !important;
 }
@@ -64,8 +81,8 @@ a:visited {
 
 #mottoContainer p {
     max-width: 80%;
-font-size: 28px;
-margin: 0;
+    font-size: 28px;
+    margin: 0;
 }
 
 #motto {
@@ -152,4 +169,8 @@ main {
     display: flex;
     justify-content: space-between;
     color: #c3c9ce;
+}
+
+#bottom {
+    margin-top: 1px solid #F6F6F6;
 }
