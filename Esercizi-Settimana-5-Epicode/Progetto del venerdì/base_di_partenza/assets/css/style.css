@@ -4,10 +4,13 @@ body {
 
 header {
     background-color: #ffc017;
+    border-bottom: 1px solid black;
 }
 
-.noscroll {
+.noScroll {
     position: sticky;
+    border-bottom: 1px solid black;
+    width: 100%;
 }
 
 nav {
@@ -57,6 +60,13 @@ svg {
 
 main {
     background-color: #FFFFFF;
+    padding: 50px;
+}
+
+#positioner {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -64,6 +74,8 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 2.3rem;
+
 }
 
 #sectionTitle {
@@ -71,9 +83,11 @@ main {
 }
 
 .article {
-    margin: 20px;
+    margin: 2rem;
     display: flex;
     flex-direction: row;
+    transform: scale(1.1);
+    max-width: 25%;
 }
 
 .articleNumber p {
