@@ -127,7 +127,7 @@ main {
     padding: 50px;
 }
 
-#positioner {
+.positioner {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -186,23 +186,25 @@ main {
 #secondHalf {
     padding-top: 50px;
     display: flex;
+    flex-direction: column;
 }
 
 .newSection {
     display: flex;
-    max-width: 50%;
+    max-width: 55%;
     align-items: end;
     gap: 30px;
+    margin: 1rem;
 }
 
 .largeArticle {
     display: flex;
     flex-direction: column;
-    max-width: 40%;
+    max-width: 60%;
 }
 
 .esplicativePic img {
-    max-width: 80%;
+    max-width: 100%;
 }
 
 .newSection {
