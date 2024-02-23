@@ -161,7 +161,7 @@ main {
 .articleNumber p {
     margin-top: 0;
     font-size: 2.2rem;
-    color: #c3c9ce;
+    color: #8b8b8b;
 }
 
 .author {
@@ -182,7 +182,11 @@ main {
 .articleBottom {
     display: flex;
     justify-content: space-between;
-    color: #c3c9ce;
+    color: #8b8b8b;
+}
+
+#secondSection {
+    display: flex;
 }
 
 #secondHalf {
@@ -191,10 +195,10 @@ main {
     flex-direction: column;
 }
 
-.newSection {
+.relatedArticle {
     display: flex;
-    max-width: 55%;
-    align-items: end;
+    align-items: center;
+    padding-left: 2.8rem;
     gap: 30px;
     margin: 1rem;
 }
@@ -205,11 +209,64 @@ main {
     max-width: 60%;
 }
 
-.esplicativePic img {
-    max-width: 100%;
+.articleTitle h3 {
+    font-size: 1.4rem;
 }
 
-.newSection {
+.articleTitle p {
+    font-size: 1.1rem;
+    color: #8b8b8b;
+}
+
+
+.esplicativePic img {
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+}
+
+#endPart {
+    max-width: 30%;
     display: flex;
-    max-width: 50%;
+    flex-direction: row;
+}
+
+#endPart h4 {
+    text-align: center;
+}
+
+#boxOfBoxes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#boxOfBoxes div {
+    border: 1px solid #8b8b8b;
+    padding: 12px 16px 12px 16px;
+    color: #8b8b8b;
+}
+
+.tags span {
+    padding: 7px;
+    border-radius: 65px;
+   background-color: #f2f2f2;
+}
+
+#unorderedList {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-top: 1px solid #8b8b8b;
+    color: #8b8b8b;
+    padding: 1rem;
+    align-items: flex-start;
+    list-style: none;
+}
+
+#unorderedList li {
+    margin: 0.8rem;
 }
