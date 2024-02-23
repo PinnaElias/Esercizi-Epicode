@@ -6,6 +6,10 @@ header {
     background-color: #ffc017;
 }
 
+.noscroll {
+    position: sticky;
+}
+
 nav {
     display: flex;
     width: 100%;
