@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    background-color: #ffc017;
+}
+
+nav {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover,
+a:visited {
+    color: black;
+}
+
+main {
+    background-color: #FFFFFF;
+}
