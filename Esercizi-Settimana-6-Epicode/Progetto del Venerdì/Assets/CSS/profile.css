@@ -1,0 +1,21 @@
+h1 {
+    font-size: 3rem;
+}
+
+.btn {
+    border-radius: 0 !important;
+}
+
+#mainBody {
+    border-bottom: 1px solid #6c757d !important;
+    border-top: 1px solid #6c757d !important;
+}
+
+#langChoice {
+    border: 2px solid white !important;
+}
+
+#maturitySet {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
