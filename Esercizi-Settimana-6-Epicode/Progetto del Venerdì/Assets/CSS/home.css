@@ -8,7 +8,18 @@ body {
     padding: 0;
 }
 
+.carousel-item {
+    display: block;
+}
+
 .carosello {
     width: 150px;
-    margin: 2px;
+    padding: 2px;
+}
+
+#generi {
+    border-radius: 0px;
+    border: 2px solid #3d4246;
+    text-align: center;
+    padding: 10px 15px !important;
 }
