@@ -1,4 +1,14 @@
+body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 #proPic {
     width: 50px;
     padding: 0;
+}
+
+.carosello {
+    width: 150px;
+    margin: 2px;
 }

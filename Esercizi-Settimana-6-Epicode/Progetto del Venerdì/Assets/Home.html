@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="./CSS/home.css">
 </head>
 
-<body>
+<body class="bg-black">
 
     <header>
 
-        <nav class="navbar navbar-expand-lg bg-dark ">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid d-flex justify-content-between">
                 <div class="container d-flex">
                     <a class="navbar-brand" href="#">
@@ -50,15 +50,45 @@
                     <div class="nav-item btn dropdown text-light">
                         <img src="./assets/avatar.png" class="img-thumbnail img-fluid" id="proPic" />
                     </div>
-
                 </div>
         </nav>
 
     </header>
 
     <main>
+        <!-- Qui inizia -->
+        <div id="carouselShows" class="carousel slide d-flex" data-ride="carousel" data-interval="5000">
+            <div class="carousel-inner d-flex">
+                <div class="carousel-item active d-flex justify-content-center">
+                <div class="">
+                    <img src="./assets/media/media0.webp" alt="Image 1" class="carosello">
+                </div>
+                <div class="">
+                    <img src="./assets/media/media1.jpg" alt="Image 2" class="carosello">
+                </div>
+                <div class="">
+                    <img src="./assets/media/media2.webp" alt="Image 3" class="carosello">
+                </div>
+                <div class="">
+                    <img src="./assets/media/media3.webp" alt="Image 4" class="carosello">
+                </div>
+                <div class="">
+                    <img src="./assets/media/media4.jpg" alt="Image 5" class="carosello">
+                </div>
+                <div class="">
+                    <img src="./assets/media/media5.webp" alt="Image 6" class="carosello">
+                </div>
+            </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselShows" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselShows" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
 
-
+        </div>
+        <!-- Qui finisce-->
     </main>
 
 </body>
