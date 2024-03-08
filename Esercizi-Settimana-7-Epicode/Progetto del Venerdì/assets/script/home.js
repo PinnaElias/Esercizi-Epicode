@@ -1,25 +1,37 @@
-const url = `https://striveschool-api.herokuapp.com/api/computers/`
-const authorization = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZTg5MDJkN2IxMTAwMTkwZTZmNjAiLCJpYXQiOjE3MDk4OTM3NzYsImV4cCI6MTcxMTEwMzM3Nn0.3j7w5UhmneRJZMuumLX7WEp6l09ojfahRrt1uS6xurY"
-const products = []
+const url = "https://striveschool-api.herokuapp.com/api/product/"
+const authorization = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZTg5MDJkN2IxMTAwMTkwZTZmNjAiLCJpYXQiOjE3MDk5MTIzMzAsImV4cCI6MTcxMTEyMTkzMH0.WBYPTNkocZbl5Jys2TCf4ccpKXb0MAm1LCqprjqMGlw"
+const products = document.getElementById("productList");
+let list = [];
 
+window.addEventListener('load', function () {
+    loadProducts();
+});
 
-async function retrieveData() {
-
-    await fetch(url, {
-        headers: {
-            "Authorization": authorization
-        }
-    }).then(response => {
-        if (response.ok) {
-            return response.json();
-        } else {
-            throw new Error(`Errore nella chiamata API: ${response.status}`);
-        }}).then
-    then(data => {
-        products = data;
-        print();
-    })
-        .catch(err => {
-            console.log(err);
+const loadProducts = async () => {
+    try {
+        let response = await fetch(Url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": authorization,
+            }
         });
+        list = await response.json();
+        printData();
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const vetrina = () => {
+    products.innerHTML += `
+<div class="card" style="width: 18rem;">
+  <img src="${newProduct.imageUrl}" class="card-img-top" alt="${newProduct.description}">
+  <div class="card-body">
+    <h5 class="card-title">${newProduct.name}</h5>
+    <p class="card-text">${newProduct.description}.</p>
+    <a href="./backoffice_modify.html" class="btn btn-primary">Modifica</a>
+  </div>
+</div>
+`
 }

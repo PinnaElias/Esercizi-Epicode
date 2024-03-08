@@ -8,7 +8,7 @@ let addProduct = document.getElementById('add');
 let lista = []
 
 const url = "https://striveschool-api.herokuapp.com/api/product/"
-const authorization = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZTg5MDJkN2IxMTAwMTkwZTZmNjAiLCJpYXQiOjE3MDk4OTM3NzYsImV4cCI6MTcxMTEwMzM3Nn0.3j7w5UhmneRJZMuumLX7WEp6l09ojfahRrt1uS6xurY"
+const authorization = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZTg5MDJkN2IxMTAwMTkwZTZmNjAiLCJpYXQiOjE3MDk5MTIzMzAsImV4cCI6MTcxMTEyMTkzMH0.WBYPTNkocZbl5Jys2TCf4ccpKXb0MAm1LCqprjqMGlw"
 
 
 class ProductItem {
@@ -21,42 +21,57 @@ class ProductItem {
     }
 }
 
-addProduct.onclick = function () {
-    let newProduct = new ProductItem(
-        name = name.value, //name è deprecato ma è il nome che richiede la API
-        description = description.value,
-        imageUrl = imageUrl.value,
-        brand = brand.value,
-        price = price.value,
-    )
-    lista.push(createdProduct)
+let newProduct = new ProductItem(
+    name.value = ProductItem.name, //name è deprecato ma è il nome che richiede la API
+    description.value = ProductItem.description,
+    brand.value = ProductItem.brand,
+    imageUrl.value = ProductItem.imageUrl,
+    price.value = ProductItem.value,
+)
 
 
-    const options = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZTg5MDJkN2IxMTAwMTkwZTZmNjAiLCJpYXQiOjE3MDk5MDQwMDgsImV4cCI6MTcxMTExMzYwOH0.1AWVftalBVG1Ro5ruuKSP51mM3qrb_ogBTdhIS7a7qA",
-        },
-        body: JSON.stringify(newProduct),
-    };
+const options = new Headers({
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+        "Authorization": authorization,
+    },
+    body: JSON.stringify(ProductItem),
+});
 
 
-    fetch(url, options)
-        .then((response) => response.json())
-        .then(data => {
-            const createdProduct = data;
-            lista.push(createdProduct)
-        })
-        .catch(Error => {
-            console.log(Error);
+addProduct.addEventListener('click', function(newProduct) {
+    newProduct.preventDefault();
+    tryPost(newProduct);
+});
+
+
+async function tryPost() {
+    try {
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": authorization
+            },
+            body: JSON.stringify(newProduct),
         });
-    /*
-        name.value = '' //svuotamento del form
-    brand.value = ''
-    cost.value = ''
-    imageUrl.value = ''
-    description.value = ''
-    */
 
+        if (!response.ok) {
+            throw new Error(response.status);
+        } else {
+
+            await response.json();
+            alert("Prodotto inserito con successo!");
+            location.href = "index.html";
+            name.value = ''
+            brand.value = ''
+            cost.value = ''
+            imageUrl.value = ''
+            description.value = ''
+        }
+    } catch (error) {
+        console.error(error.message);
+        alert("Operazione non riuscita");
+    }
 }
