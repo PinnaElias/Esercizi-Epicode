@@ -1,35 +1,62 @@
-let _name = document.getElementById('name');
-let _brand = document.getElementById('brand');
-let _cost = document.getElementById('cost');
-let _source = document.getElementById('source');
-let _description = document.getElementById('description')
+let name = document.getElementById('name');
+let brand = document.getElementById('brand');
+let price = document.getElementById('cost');
+let imageUrl = document.getElementById('imageUrl');
+let description = document.getElementById('description')
 
-let list = document.getElementById('listPublisher');
 let addProduct = document.getElementById('add');
+let lista = []
+
+const url = "https://striveschool-api.herokuapp.com/api/product/"
+const authorization = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZTg5MDJkN2IxMTAwMTkwZTZmNjAiLCJpYXQiOjE3MDk4OTM3NzYsImV4cCI6MTcxMTEwMzM3Nn0.3j7w5UhmneRJZMuumLX7WEp6l09ojfahRrt1uS6xurY"
 
 
 class ProductItem {
-    constructor(_name, _brand, _cost, _source, _description) {
-        this._name = _name;
-        this._brand = _brand;
-        this._cost = _cost;
-        this._source = _source;
-        this._description = _description
-    }}
-
+    constructor(name, description, brand, imageUrl, price) {
+        this.name = name;
+        this.description = description
+        this.brand = brand;
+        this.imageUrl = imageUrl;
+        this.price = price;
+    }
+}
 
 addProduct.onclick = function () {
     let newProduct = new ProductItem(
-        _name.value,
-        _brand.value,
-        _cost.value,
-        _source.value,
-        _description.value
+        name = name.value, //name è deprecato ma è il nome che richiede la API
+        description = description.value,
+        imageUrl = imageUrl.value,
+        brand = brand.value,
+        price = price.value,
     )
+    lista.push(createdProduct)
 
-    _name.value = ''
-    _brand.value = ''
-    _cost.value = ''
-    _source.value = ''
+
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZTg5MDJkN2IxMTAwMTkwZTZmNjAiLCJpYXQiOjE3MDk5MDQwMDgsImV4cCI6MTcxMTExMzYwOH0.1AWVftalBVG1Ro5ruuKSP51mM3qrb_ogBTdhIS7a7qA",
+        },
+        body: JSON.stringify(newProduct),
+    };
+
+
+    fetch(url, options)
+        .then((response) => response.json())
+        .then(data => {
+            const createdProduct = data;
+            lista.push(createdProduct)
+        })
+        .catch(Error => {
+            console.log(Error);
+        });
+    /*
+        name.value = '' //svuotamento del form
+    brand.value = ''
+    cost.value = ''
+    imageUrl.value = ''
+    description.value = ''
+    */
 
 }
