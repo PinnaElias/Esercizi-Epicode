@@ -1,1 +1,9 @@
-<p>header works!</p>
+<header>
+  <nav>
+    <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+    <a href="fiat" routerLink="FiatComponent">Fiat</a>
+    <a href="ford" routerLink="FordComponent">Ford</a>
+    <a href="audi" routerLink="AudiComponent">Audi</a>
+    <a [routerLink]="['FiatComponent']">Fiat2</a>
+  </nav>
+</header>
