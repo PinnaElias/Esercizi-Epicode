@@ -1,1 +1,47 @@
-<p>home works!</p>
+<div class="hero text-center bg-image" style="background-image: url('path/all/immagine.jpg');">
+    <div class="container">
+      <h1 class="display-3">Grosso Titolo</h1>
+      <h2 class="subtitle">Sottotitolo Centrale</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <button class="btn btn-transparent">
+            <img src="path/immagine1.png" alt="Immagine 1">
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-transparent">
+            <img src="path/immagine2.png" alt="Immagine 2">
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-transparent">
+            <img src="path/immagine3.png" alt="Immagine 3">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!--Qui sopra il menu marchi, qui sotto le due card random-->
+
+<div class="container d-flex justify-content-evenly">
+    <div class="card" style="width: 18rem;">
+        <img src="https://www.kimballstock.com/pix/car/p/{{cars[randomIndexA].modelImage}}" class="card-img-top"
+            alt="Auto che fan brum brum con quattro ruote">
+        <div class="card-body">
+            <h5 class="card-title">{{cars[randomIndexA].model}}, {{cars[randomIndexA].brand}}</h5>
+            <p class="card-text">{{cars[randomIndexA].year}}, £{{cars[randomIndexA].price}}, </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://www.kimballstock.com/pix/car/p/{{cars[randomIndexB].modelImage}}" class="card-img-top"
+            alt="Auto che fan brum brum con quattro ruote">
+        <div class="card-body">
+            <h5 class="card-title">{{cars[randomIndexB].model}}, {{cars[randomIndexB].brand}}</h5>
+            <p class="card-text">{{cars[randomIndexB].year}}, £{{cars[randomIndexB].price}}, </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>
