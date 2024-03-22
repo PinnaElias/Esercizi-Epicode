@@ -4,7 +4,7 @@ import { PostInterface } from 'src/interfaces/post.interface';
 @Component({
   selector: 'app-inactive-posts',
   templateUrl: './inactive-posts.component.html',
-  styleUrls: ['./inactive-posts.component.scss']
+  styleUrls: ['./inactive-posts.component.scss'],
 })
 export class InactivePostsComponent {
   posts!: PostInterface[];
