@@ -1,1 +1,37 @@
-<p>fiat works!</p>
+<div class="container-fluid bg-secondary">
+    <div class="row">
+        <div class="col-6">
+            <img src="https://listcarbrands.com/wp-content/uploads/2016/02/Logo-Fiat-600x338.png" class="linkImg">
+        </div>
+        <div>
+            <h1>Le nostre auto Fiat</h1>
+        </div>
+    </div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let car of fiatCars">
+      <div class="card mb-3" [ngClass]="{
+        'bg-success': car.available,
+        'bg-danger': !car.available
+    }">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img [src]="car.modelImage" class="img-fluid rounded-start" alt="Car Image"> <!--Per qualche motivo, nel momento in cui carico il link vero e proprio, 
+                l'intero sistema va in errore, compreso il resto della card, quindi sto lasciando momentaneamente il src non funzionante-->
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ car.brand }} - {{ car.model }}</h5>
+              <p class="card-text">Year: {{ car.year }}</p>
+              <p class="card-text">Price: ${{ car.price }}</p>
+              <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

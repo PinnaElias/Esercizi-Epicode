@@ -15,7 +15,10 @@
   <!--Qui sopra il menu marchi, qui sotto le due card random-->
 
 <div class="container d-flex justify-content-evenly">
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;" [ngClass]="{
+        'bg-success': cars[randomIndexA].available,
+        'bg-danger': !cars[randomIndexA].available
+    }">
         <img src="https://www.kimballstock.com/pix/car/p/{{cars[randomIndexA].modelImage}}" class="card-img-top"
             alt="Auto che fan brum brum con quattro ruote">
         <div class="card-body">
@@ -25,7 +28,10 @@
         </div>
     </div>
 
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;" [ngClass]="{
+        'bg-success': cars[randomIndexB].available,
+        'bg-danger': !cars[randomIndexB].available
+    }">
         <img src="https://www.kimballstock.com/pix/car/p/{{cars[randomIndexB].modelImage}}" class="card-img-top"
             alt="Auto che fan brum brum con quattro ruote">
         <div class="card-body">

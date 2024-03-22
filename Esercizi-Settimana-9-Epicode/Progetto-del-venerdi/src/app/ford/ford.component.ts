@@ -17,12 +17,14 @@ export class FordComponent implements OnInit {
       .then(response => response.json())
       .then(data => {
         this.cars = data;
-        for (let ford of this.cars) {
-          if (data.brand === "Ford") {
-            ford.push(this.fordCars)
-          }}
+        for (let car of this.cars) {
+          if (car.brand === "Ford") {
+            this.fordCars.push(car);
+          }
+        }
       })
       .catch(error => {
-        console.log(error)
+        console.log(error);
       });
-}}
+  }
+}
