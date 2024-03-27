@@ -1,0 +1,57 @@
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4"
+        src="https://cdn.discordapp.com/attachments/1196818563139383437/1220646473310404639/logo.png?ex=660fb29d&is=65fd3d9d&hm=8a105faf9250394dba3767f92678168d041002d4eb2f67e41c02f4bd4b824058&"
+        alt="Auto rent logo">
+    <h1 class="display-5 fw-bold">Accendi il tuo futuro!</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4 strong">
+
+            Nuova auto? Usata garantita? Da noi trovi l'auto dei tuoi sogni!
+            
+            Concessionario Autorent: km di convenienza, anni di esperienza.
+            
+            Passa a trovarci o visita il nostro sito per scoprire le offerte imperdibili!</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a class="nav-link" [routerLink]="['/fiat']" routerLinkActive="router-link-active"><img
+                    src="https://listcarbrands.com/wp-content/uploads/2016/02/Logo-Fiat-600x338.png"
+                    class="linkImg"></a>
+            <a class="nav-link" [routerLink]="['/ford']" routerLinkActive="router-link-active"><img
+                    src="https://listcarbrands.com/wp-content/uploads/2016/03/Ford-Logo-600x338.png"
+                    class="linkImg"></a>
+            <a class="nav-link" [routerLink]="['/audi']" routerLinkActive="router-link-active"><img
+                    src="https://listcarbrands.com/wp-content/uploads/2015/10/Audi-Logo-600x338.png"
+                    class="linkImg"></a>
+
+        </div>
+    </div>
+</div>
+
+<!--Qui sopra il menu marchi, qui sotto le due card random-->
+
+<div class="container d-flex justify-content-evenly">
+    <div class="card" style="width: 18rem;" [ngClass]="{
+        'bg-success': cars[randomIndexA].available,
+        'bg-danger': !cars[randomIndexA].available
+    }">
+        <img src="https://www.kimballstock.com/pix/car/p/{{cars[randomIndexA].modelImage}}" class="card-img-top"
+            alt="Auto che fan brum brum con quattro ruote">
+        <div class="card-body">
+            <h5 class="card-title">{{cars[randomIndexA].model}}, {{cars[randomIndexA].brand}}</h5>
+            <p class="card-text">{{cars[randomIndexA].year}}, £{{cars[randomIndexA].price}}, </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;" [ngClass]="{
+        'bg-success': cars[randomIndexB].available,
+        'bg-danger': !cars[randomIndexB].available
+    }">
+        <img src="https://www.kimballstock.com/pix/car/p/{{cars[randomIndexB].modelImage}}" class="card-img-top"
+            alt="Auto che fan brum brum con quattro ruote">
+        <div class="card-body">
+            <h5 class="card-title">{{cars[randomIndexB].model}}, {{cars[randomIndexB].brand}}</h5>
+            <p class="card-text">{{cars[randomIndexB].year}}, £{{cars[randomIndexB].price}}, </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['/']"><img
+                src="https://cdn.discordapp.com/attachments/1196818563139383437/1220646473310404639/logo.png?ex=660fb29d&is=65fd3d9d&hm=8a105faf9250394dba3767f92678168d041002d4eb2f67e41c02f4bd4b824058&"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/']"
+                        routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/ford']" routerLinkActive="router-link-active">Ford</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/fiat']" routerLinkActive="router-link-active">Fiat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/audi']" routerLinkActive="router-link-active">Audi</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
