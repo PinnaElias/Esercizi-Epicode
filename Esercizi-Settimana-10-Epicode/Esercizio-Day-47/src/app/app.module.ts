@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FiatComponent } from './fiat/fiat.component';
 import { AudiComponent } from './audi/audi.component';
 import { FordComponent } from './ford/ford.component';
+import { CarrelloComponent } from './carrello/carrello.component';
 
 const routes: Route[] = [
   {
@@ -33,6 +34,10 @@ const routes: Route[] = [
   {
     path: 'audi',
     component: AudiComponent
+  },
+  {
+    path: 'carrello',
+    component: CarrelloComponent
   }
 ]
 
@@ -45,6 +50,7 @@ const routes: Route[] = [
     FiatComponent,
     AudiComponent,
     FordComponent,
+    CarrelloComponent,
   ],
   imports: [
     BrowserModule,

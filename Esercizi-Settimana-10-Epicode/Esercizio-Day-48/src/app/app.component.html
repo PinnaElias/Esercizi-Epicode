@@ -1,0 +1,8 @@
+<div class="container">
+  <div *ngIf="photos; else loadingTemplate" class="row"></div>
+  <<ng-template #loadingTemplate>
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </ng-template>
+</div> 
